@@ -1,0 +1,51 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="gradeviewing.enrollmentsystem.com.gradeviewingapp.home">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dashboard"
+            android:textSize="20sp"
+            android:textColor="@color/md_black_1000"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="70dp"
+                android:text="My Grades"
+                android:textColor="@color/md_white_1000"
+                android:background="@color/md_red_700"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"/>
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="70dp"
+                android:text="My CLass"
+                android:textColor="@color/md_white_1000"
+                android:background="@color/md_red_700"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

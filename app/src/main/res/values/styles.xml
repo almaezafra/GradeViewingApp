@@ -1,0 +1,62 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/md_red_700</item>
+        <item name="colorPrimaryDark">@color/md_red_700</item>
+        <item name="colorAccent">@color/textColorPrimary</item>
+    </style>
+
+    <style name="NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorAccent">@color/textColorPrimary</item>
+    </style>
+
+    <style name="Button.Red" parent="Widget.AppCompat.Button">
+        <item name="colorButtonNormal">@color/md_red_700</item>
+        <item name="android:textColor">@color/md_grey_100</item>
+    </style>
+
+    <style name="Button.White" parent="Widget.AppCompat.Button">
+        <item name="colorButtonNormal">@color/md_grey_200</item>
+        <item name="android:textColor">@color/paylink_orange</item>
+    </style>
+
+    <style name="Button.Grey" parent="Widget.AppCompat.Button">
+        <item name="colorButtonNormal">@color/md_grey_800</item>
+        <item name="android:textColor">@color/md_grey_100</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="NavigationViewStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:listPreferredItemHeightSmall">40dp</item>
+    </style>
+
+    <!-- Transparent dialog -->
+    <style name="TransparentProgressDialog" parent="@android:style/Theme.Holo.Dialog.NoActionBar">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+
+</resources>

@@ -1,0 +1,347 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="gradeviewing.enrollmentsystem.com.gradeviewingapp.profile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My Info"
+                android:textSize="20dp"
+                android:textColor="@color/md_black_1000"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="3"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/user"
+                    android:tint="@color/md_red_700"/>
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:background="@color/md_blue_grey_50"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Juan Dela Cruz"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:textColor="@color/md_black_1000"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="12-027-001"
+
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:textColor="@color/md_black_1000"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Grade 1 - Red"
+
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:textColor="@color/md_black_1000"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:weightSum="3"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Birthdate:"
+                    android:textSize="14sp"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:text="January 11, 2011"
+                    android:textSize="14sp"
+                    android:textColor="@color/md_black_1000"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:weightSum="3"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Birthdate:"
+                    android:textSize="14sp"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:text="January 11, 2011"
+                    android:textSize="14sp"
+                    android:textColor="@color/md_black_1000"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:weightSum="3"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Birthdate:"
+                    android:textSize="14sp"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:text="January 11, 2011"
+                    android:textSize="14sp"
+                    android:textColor="@color/md_black_1000"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:weightSum="3"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Birthdate:"
+                    android:textSize="14sp"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:text="January 11, 2011"
+                    android:textSize="14sp"
+                    android:textColor="@color/md_black_1000"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mother's Details"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/md_black_1000"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:weightSum="3"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Name:"
+                    android:textSize="14sp"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:text="Teodora Alonzo"
+                    android:textSize="14sp"
+                    android:textColor="@color/md_black_1000"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:weightSum="3"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Occupation"
+                    android:textSize="14sp"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:text="Housewife"
+                    android:textSize="14sp"
+                    android:textColor="@color/md_black_1000"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:weightSum="3"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Contact No.:"
+                    android:textSize="14sp"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:text="09123456789"
+                    android:textSize="14sp"
+                    android:textColor="@color/md_black_1000"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fathers's Details"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/md_black_1000"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:weightSum="3"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Name:"
+                    android:textSize="14sp"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:text="Teodora Alonzo"
+                    android:textSize="14sp"
+                    android:textColor="@color/md_black_1000"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:weightSum="3"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Occupation"
+                    android:textSize="14sp"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:text="Housewife"
+                    android:textSize="14sp"
+                    android:textColor="@color/md_black_1000"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:weightSum="3"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Contact No.:"
+                    android:textSize="14sp"
+                    android:textColor="@color/md_black_1000"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:text="09123456789"
+                    android:textSize="14sp"
+                    android:textColor="@color/md_black_1000"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:layout_gravity="bottom">
+    <TextView
+        android:background="@color/md_red_700"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EDIT"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/md_white_1000"
+        android:padding="12dp"
+        android:gravity="center"
+        />
+
+</LinearLayout>
+
+</FrameLayout>

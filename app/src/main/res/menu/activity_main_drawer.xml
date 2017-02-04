@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Profile Settings" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_signout"
+            android:title="Logout" />
+    </group>
+
+    <group android:checkableBehavior
+        ="none">
+        <item
+            android:id="@+id/nav_grades"
+            android:icon="@drawable/ic_attach_doc"
+            android:title="View Grades" />
+        <item
+            android:id="@+id/nav_gallery1"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="View Current Section"
+            android:visible="false"/>
+        <item
+            android:id="@+id/nav_slideshow1"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="View Current Teachers"
+            android:visible="false"/>
+    </group>
+
+</menu>
