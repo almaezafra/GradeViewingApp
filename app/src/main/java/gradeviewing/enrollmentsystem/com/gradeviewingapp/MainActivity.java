@@ -18,7 +18,7 @@ import gradeviewing.enrollmentsystem.com.gradeviewingapp.Fragments.home;
 import gradeviewing.enrollmentsystem.com.gradeviewingapp.Fragments.profile;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener,profile.OnFragmentInteractionListener,home.OnFragmentInteractionListener,Grade.OnFragmentInteractionListener {
+        implements NavigationView.OnNavigationItemSelectedListener,profile.OnFragmentInteractionListener,home.OnFragmentInteractionListener,Grade.OnFragmentInteractionListener,Enlist.OnFragmentInteractionListener {
 
     private FragmentManager manager;
     private static FragmentTransaction transaction;
@@ -51,6 +51,11 @@ public class MainActivity extends AppCompatActivity
 
         manager = getSupportFragmentManager();
         transaction = manager.beginTransaction();
+        currentFragment = 0;
+        Fragment frag = new home();
+        transaction.replace(R.id.content_main, frag, "A");
+        transaction.commit();
+
 
     }
 
@@ -94,27 +99,28 @@ public class MainActivity extends AppCompatActivity
         transaction = manager.beginTransaction();
         Fragment frag = new Fragment();
         switch (id) {
-            case R.id.nav_profile:
-                currentFragment = 1;
-                frag = new profile();
-                transaction.replace(R.id.content_main, frag, "A");
-                transaction.commit();
-                break;
             case R.id.nav_home:
                 currentFragment = 0;
                 frag = new home();
                 transaction.replace(R.id.content_main, frag, "A");
                 transaction.commit();
                 break;
+            case R.id.nav_profile:
+                currentFragment = 1;
+                frag = new profile();
+                transaction.replace(R.id.content_main, frag, "A");
+                transaction.commit();
+                break;
+
             case R.id.nav_grades:
-                currentFragment = 2;
+                currentFragment = 3;
                 frag = new Grade();
                 transaction.replace(R.id.content_main, frag, "A");
                 transaction.commit();
                 break;
-            default:
-                currentFragment = 0;
-                frag = new Grade();
+            case R.id.nav_enlist:
+                currentFragment = 4;
+                frag = new Enlist();
                 transaction.replace(R.id.content_main, frag, "A");
                 transaction.commit();
                 break;

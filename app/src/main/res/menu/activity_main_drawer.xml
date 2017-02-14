@@ -13,6 +13,15 @@
             android:icon="@drawable/ic_menu_manage"
             android:title="Profile Settings" />
         <item
+            android:id="@+id/nav_grades"
+            android:icon="@drawable/ic_attach_doc"
+            android:title="View Grades" />
+        <item
+            android:id="@+id/nav_enlist"
+            android:icon="@drawable/ic_edit"
+            android:title="Enlistment" />
+
+        <item
             android:id="@+id/nav_logout"
             android:icon="@drawable/ic_signout"
             android:title="Logout" />
@@ -20,10 +29,7 @@
 
     <group android:checkableBehavior
         ="none">
-        <item
-            android:id="@+id/nav_grades"
-            android:icon="@drawable/ic_attach_doc"
-            android:title="View Grades" />
+
         <item
             android:id="@+id/nav_gallery1"
             android:icon="@drawable/ic_menu_gallery"
