@@ -1,4 +1,4 @@
-package gradeviewing.enrollmentsystem.com.gradeviewingapp;
+package gradeviewing.enrollmentsystem.com.gradeviewingapp.Fragments;
 
 import android.content.Context;
 import android.net.Uri;
@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import gradeviewing.enrollmentsystem.com.gradeviewingapp.R;
 
 
 /**

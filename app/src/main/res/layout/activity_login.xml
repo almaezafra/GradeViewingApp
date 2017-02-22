@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/md_red_700"
+    android:background="@color/md_white_1000"
     tools:context="gradeviewing.enrollmentsystem.com.gradeviewingapp.LoginActivity">
 
     <!-- Login progress -->
@@ -33,22 +33,20 @@
             android:orientation="vertical"
             android:layout_gravity="center_vertical"
             android:padding="20dp">
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/school_logo"
+                android:layout_gravity="center"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Grade Viewing App"
+                android:text="School Name App"
                 android:textStyle="bold"
                 android:gravity="center"
-                android:textSize="35sp"
-                android:textColor="@color/md_white_1000"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="LOGIN"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="20sp"
-                android:textColor="@color/md_white_1000"/>
+                android:textSize="24sp"
+                android:textColor="@color/md_grey_800"/>
+
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -58,9 +56,8 @@
                     android:layout_height="wrap_content"
                     android:hint="Username"
 
-                    android:background="@drawable/custom_editext4"
+                    android:background="@drawable/custom_editext"
                     android:padding="10dp"
-                    android:inputType="textEmailAddress"
                     android:maxLines="1"
                     android:singleLine="true" />
 
@@ -75,7 +72,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Password"
-                    android:background="@drawable/custom_editext4"
+                    android:background="@drawable/custom_editext"
                     android:padding="10dp"
                     android:imeActionId="@+id/login"
                     android:imeActionLabel="@string/action_sign_in_short"
@@ -93,10 +90,35 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="Sign IN"
-                android:background="@color/md_white_1000"
-                android:textColor="@color/md_red_700"
+                android:textColor="@color/md_white_1000"
+                android:background="@color/md_red_700"
                 android:textStyle="bold" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:textSize="14sp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:textColor="@color/md_grey_900"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:id="@+id/apisettings"
+                android:textSize="14sp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:textColor="@color/md_blue_700"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" © 2017. School Name. All right reserved."
+                android:textSize="12sp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:textColor="@color/md_grey_900"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

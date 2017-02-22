@@ -2,23 +2,23 @@ package gradeviewing.enrollmentsystem.com.gradeviewingapp;
 
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 
+import gradeviewing.enrollmentsystem.com.gradeviewingapp.Fragments.Grade;
+import gradeviewing.enrollmentsystem.com.gradeviewingapp.Fragments.home;
+import gradeviewing.enrollmentsystem.com.gradeviewingapp.Fragments.profile;
+
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener,profile.OnFragmentInteractionListener,home.OnFragmentInteractionListener {
+        implements NavigationView.OnNavigationItemSelectedListener,profile.OnFragmentInteractionListener,home.OnFragmentInteractionListener,Grade.OnFragmentInteractionListener,Enlist.OnFragmentInteractionListener {
 
     private FragmentManager manager;
     private static FragmentTransaction transaction;
@@ -51,6 +51,11 @@ public class MainActivity extends AppCompatActivity
 
         manager = getSupportFragmentManager();
         transaction = manager.beginTransaction();
+        currentFragment = 0;
+        Fragment frag = new home();
+        transaction.replace(R.id.content_main, frag, "A");
+        transaction.commit();
+
 
     }
 
@@ -94,15 +99,28 @@ public class MainActivity extends AppCompatActivity
         transaction = manager.beginTransaction();
         Fragment frag = new Fragment();
         switch (id) {
-            case R.id.nav_profile:
+            case R.id.nav_home:
                 currentFragment = 0;
+                frag = new home();
+                transaction.replace(R.id.content_main, frag, "A");
+                transaction.commit();
+                break;
+            case R.id.nav_profile:
+                currentFragment = 1;
                 frag = new profile();
                 transaction.replace(R.id.content_main, frag, "A");
                 transaction.commit();
                 break;
-            case R.id.nav_home:
-                currentFragment = 0;
-                frag = new home();
+
+            case R.id.nav_grades:
+                currentFragment = 3;
+                frag = new Grade();
+                transaction.replace(R.id.content_main, frag, "A");
+                transaction.commit();
+                break;
+            case R.id.nav_enlist:
+                currentFragment = 4;
+                frag = new Enlist();
                 transaction.replace(R.id.content_main, frag, "A");
                 transaction.commit();
                 break;

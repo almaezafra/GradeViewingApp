@@ -20,6 +20,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -29,9 +30,15 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import gradeviewing.enrollmentsystem.com.gradeviewingapp.API.BiometricsApi;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
@@ -41,6 +48,7 @@ import static android.Manifest.permission.READ_CONTACTS;
 public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor> {
 
     /**
+     *
      * Id to identity READ_CONTACTS permission request.
      */
     private static final int REQUEST_READ_CONTACTS = 0;
@@ -82,7 +90,13 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 return false;
             }
         });
-
+        TextView apisettings = (TextView) findViewById(R.id.apisettings);
+        apisettings.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent (LoginActivity.this,ApiSettings.class));
+            }
+        });
         Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
@@ -172,10 +186,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             mEmailView.setError(getString(R.string.error_field_required));
             focusView = mEmailView;
             cancel = true;
-        } else if (!isEmailValid(email)) {
-            mEmailView.setError(getString(R.string.error_invalid_email));
-            focusView = mEmailView;
-            cancel = true;
         }
 
         if (cancel) {
@@ -194,7 +204,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
     private boolean isEmailValid(String email) {
         //TODO: Replace this with your own logic
-        return email.contains("@");
+        return email.length()==9;
     }
 
     private boolean isPasswordValid(String password) {
@@ -310,23 +320,31 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         protected Boolean doInBackground(Void... params) {
             // TODO: attempt authentication against a network service.
 
+            JSONObject loginresult = new BiometricsApi(LoginActivity.this).LoginUser(mEmail,mPassword,"");
+            Log.w("LOGIN",loginresult.toString());
+
             try {
-                // Simulate network access.
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                return false;
+                loginresult = new JSONObject(loginresult.getString("Data"));
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
-
-            for (String credential : DUMMY_CREDENTIALS) {
-                String[] pieces = credential.split(":");
-                if (pieces[0].equals(mEmail)) {
-                    // Account exists, return true if the password matches.
-                    return pieces[1].equals(mPassword);
+            try {
+                if(loginresult.getString("isValid").equalsIgnoreCase("true")){
+                    JSONObject memberdetails = new BiometricsApi(LoginActivity.this).StudentInfo(mEmail,"");
+                    memberdetails = new JSONObject( memberdetails.getString("Data"));
+                    GlobalVariables.Student.name = memberdetails.getString("Stud_fname")+" "+memberdetails.getString("Stud_lname");
+                    GlobalVariables.Student.section = memberdetails.getString("Section_ID");
+                    GlobalVariables.Student.studentid =memberdetails.getString("Student_ID");
+                    return true;
                 }
+                else {
+                    return false;
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
-
             // TODO: register the new account here.
-            return true;
+            return false;
         }
 
         @Override
@@ -335,6 +353,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(false);
 
             if (success) {
+                Toast.makeText(LoginActivity.this,"Welcome "+GlobalVariables.Student.name,Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(LoginActivity.this,MainActivity.class);
                 startActivity(intent);
             } else {
